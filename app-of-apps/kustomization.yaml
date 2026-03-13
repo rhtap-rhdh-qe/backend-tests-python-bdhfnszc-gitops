@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: backend-tests-python-bdhfnszc 
+  janus-idp.io/tekton: backend-tests-python-bdhfnszc
+  backstage.io/kubernetes-id: backend-tests-python-bdhfnszc
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: backend-tests-python-bdhfnszc
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
